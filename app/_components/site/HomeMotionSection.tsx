@@ -6,7 +6,7 @@ import SectionHeading from "./SectionHeading";
 
 export default function HomeMotionSection() {
   return (
-    <section className="py-20 sm:py-28" aria-label="Sobre">
+    <section id="sobre" className="scroll-mt-24 py-20 sm:py-28" aria-label="Sobre">
       <div className="mx-auto w-full max-w-6xl px-5 sm:px-8 relative">
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:items-center">
           <motion.div
@@ -21,7 +21,7 @@ export default function HomeMotionSection() {
               title="Uma filmaker movida por histórias reais."
               description={
                 <>
-                  Entre o mar e a mata, Ana busca imagens que carregam afeto, tempo e presença.
+                  Entre o mar e a mata, busco imagens que carregam afeto, tempo e presença.
                   Cada fotografia nasce de um encontro — e se recusa a apressar a beleza.
                 </>
               }

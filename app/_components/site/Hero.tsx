@@ -10,7 +10,7 @@ export default function Hero() {
       {/* BACKGROUND PRINCIPAL */}
       <div className="absolute inset-0">
         <img
-          src="/hero2.jpg" 
+          src="/hero3.png"
           alt="Hero"
           className="absolute inset-0 h-full w-full object-cover object-center"
           draggable={false}
