@@ -20,6 +20,7 @@ export default function FeaturedWorks() {
 
     elements.forEach((el, i) => {
       if (!el) return;
+
       const sync = () => {
         setPlaying((curr) => {
           const next = [...curr];
@@ -32,12 +33,9 @@ export default function FeaturedWorks() {
       el.addEventListener("pause", sync);
       el.addEventListener("loadedmetadata", sync);
 
-      // Se o primeiro vídeo for o autoplay, tenta retomar
       if (i === 0) {
-        // eslint-disable-next-line @typescript-eslint/no-floating-promises
-        el.play().catch(() => {
-          // autoplay pode ser bloqueado; estado será ajustado pelos events
-        });
+        // autoplay pode ser bloqueado; estado será ajustado pelos events
+        el.play().catch(() => {});
       }
 
       return () => {
@@ -53,17 +51,18 @@ export default function FeaturedWorks() {
     if (!el) return;
 
     if (el.paused) {
-      // eslint-disable-next-line @typescript-eslint/no-floating-promises
-      el.play().catch(() => {
-        // ignore; estado será corrigido pelos events
-      });
+      el.play().catch(() => {});
     } else {
       el.pause();
     }
   };
 
   return (
-    <section className="py-20 sm:py-28" aria-label="Trabalhos em destaque">
+    <section
+      id="portfolio"
+      className="py-20 sm:py-28"
+      aria-label="Trabalhos em destaque"
+    >
       <div className="mx-auto w-full max-w-6xl px-5 sm:px-8">
         <div className="flex items-end justify-between gap-10">
           <div>
@@ -95,7 +94,6 @@ export default function FeaturedWorks() {
                   loop
                   preload="metadata"
                   controls={false}
-                  // caso o browser bloqueie autoplay, manter o comportamento consistente
                   onClick={(e) => {
                     e.stopPropagation();
                     togglePlay(idx);
@@ -121,8 +119,18 @@ export default function FeaturedWorks() {
                       xmlns="http://www.w3.org/2000/svg"
                       className="text-white"
                     >
-                      <path d="M7 5V19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-                      <path d="M17 5V19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+                      <path
+                        d="M7 5V19"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                      />
+                      <path
+                        d="M17 5V19"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                      />
                     </svg>
                   ) : (
                     <svg
@@ -158,6 +166,4 @@ export default function FeaturedWorks() {
     </section>
   );
 }
-
-
 

@@ -1,8 +1,9 @@
 export type NavItem = { label: string; href: string };
 
 export const navItems: NavItem[] = [
-  { label: "Portfólio", href: "/portfolio" },
+  { label: "Portfólio", href: "/#portfolio" },
   { label: "Sobre", href: "/#sobre" },
+
   { label: "Diário", href: "/diario" },
   { label: "Experiências", href: "/experiencias" },
   { label: "Contato", href: "/contato" },
@@ -51,14 +52,14 @@ export const diaryPosts: DiaryPost[] = [
     excerpt: "Quando a luz encontra a água, tudo se organiza em silêncio — e a imagem acontece.",
     date: "27 de maio",
     readTime: "4 min",
-    imageSrc: "/diario2.jfif",
+    imageSrc: "/diario1.jpg",
   },
   {
     title: "Uma trilha para respirar",
     excerpt: "O ritmo do chão úmido e a distância entre dois sons — fotografia como pausa.",
     date: "12 de maio",
     readTime: "5 min",
-    imageSrc: "/diario1.jpg",
+    imageSrc: "/diario2.jfif",
   },
 ];
 
