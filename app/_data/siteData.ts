@@ -59,7 +59,7 @@ export const diaryPosts: DiaryPost[] = [
     excerpt: "O ritmo do chão úmido e a distância entre dois sons — fotografia como pausa.",
     date: "12 de maio",
     readTime: "5 min",
-    imageSrc: "/diario2.jfif",
+    imageSrc: "/diario2.png",
   },
 ];
 
